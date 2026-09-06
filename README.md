@@ -56,10 +56,12 @@
 tblCustomer.CustomerID = tblOrders.CustomerID
 tblProduct.ProductID = tblOrders.ProductID
 ```
+## Question 0 - 4 marks
+Create the Table and insert the data from the above table into your own SQL database.
 
 ## Question 1 — 4 marks
 
-A sales manager requires the customer name, order ID and total price for completed orders priced at least $250.
+A sales manager requires the customer name, order ID, and total price for completed orders priced at least $250.
 
 Arrange the result from highest total price to lowest total price. When two orders have the same price, arrange them by customer name in ascending order.
 
@@ -156,6 +158,9 @@ Write one executable SQL query joining all three tables.
 tblStudent.StudentID = tblSubmission.StudentID
 tblSubject.SubjectID = tblSubmission.SubjectID
 ```
+
+## Question 0 - 4 marks
+Create the Table and insert the data from the above table into your own SQL database.
 
 ## Question 1 — 4 marks
 
