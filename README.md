@@ -1,25 +1,25 @@
 # Posgresql command
 
+## khởi động: 
+```text 
+psql -h localhost -p 5433
+```
+
+### Overview 
 ```text
+# Xem phiên bản PostgreSQL:  SELECT version();
 
--- khởi động: psql -h localhost -p 5433
+#Xem database và user hiện tại: SELECT current_database(), current_user;
 
--- Xem phiên bản PostgreSQL
-SELECT version();
+#Xem thời gian server: SELECT now();
 
--- Xem database và user hiện tại
-SELECT current_database(), current_user;
+#Liệt kê database: \l
 
--- Xem thời gian server
-SELECT now();
-
--- Liệt kê database
-\l
-
--- Liệt kê bảng trong database hiện tại
-\dt
-
--- Tạo bảng thử nghiệm
+#Liệt kê bảng trong database hiện tại: \dt
+```
+### Basic command
+```text 
+#Tạo bảng thử nghiệm:
 
 CREATE TABLE products (
     id INT PRIMARY KEY,
@@ -27,36 +27,35 @@ CREATE TABLE products (
     price NUMERIC(12,2),
 );
 
--- Thêm dữ liệu
+#Thêm dữ liệu
 INSERT INTO products (id, name, price)
 VALUES
     (1, ‘MacBook', 2999.00),
     (2, ‘Keyboard', 120.50),
     (3, ‘Mouse', 75.00);
 
--- Xem dữ liệu
+#Xem dữ liệu
 SELECT * FROM products;
 
--- Lọc và sắp xếp
+#Lọc và sắp xếp
 SELECT name, price
 FROM products
 WHERE price >= 100
 ORDER BY price DESC;
 
--- Cập nhật dữ liệu
+#Cập nhật dữ liệu
 UPDATE products
 SET price = 110.00
 WHERE name = 'Keyboard';
 
--- Thống kê
+Thống kê
 SELECT
     COUNT(*) AS total_products,
     ROUND(AVG(price), 2) AS average_price,
     MAX(price) AS highest_price
 FROM products;
 
-### Xem cấu trúc bảng
-```text
+#Xem cấu trúc bảng
 \d products
 ```
 
