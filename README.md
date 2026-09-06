@@ -1,6 +1,7 @@
 # Posgresql command
 
-``
+```text
+
 -- khởi động: psql -h localhost -p 5433
 
 -- Xem phiên bản PostgreSQL
@@ -54,9 +55,10 @@ SELECT
     MAX(price) AS highest_price
 FROM products;
 
--- Xem cấu trúc bảng
+### Xem cấu trúc bảng
+```text
 \d products
-``
+```
 
 
 #  SQL Query Writing Practice
